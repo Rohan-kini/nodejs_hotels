@@ -1,10 +1,10 @@
 const mongoose=require('mongoose');
 require('dotenv').config();
 
-//const mongoURL='mongodb://localhost:27017/hotels'   //this url was for local database....
+const mongoURL=process.env.local_db_url;   //this url was for local database....
 
 
-const mongoURL=process.env.DB_URL;  //this is online databaase server atlas it is..
+//const mongoURL=process.env.DB_URL;  //this is online databaase server atlas it is..
 
 mongoose.connect(mongoURL,{
     useNewUrlParser:true,
